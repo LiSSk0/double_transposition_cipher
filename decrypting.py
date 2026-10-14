@@ -47,6 +47,6 @@ def decrypt_with_perm(cipher: str, p):
 
 
 def decrypt(cipher: str, key1: str, key2: str):
-    text = decrypt_with_perm(cipher, get_positions(key1))
-    text = decrypt_with_perm(text, get_positions(key2))
+    text = decrypt_with_perm(cipher, get_positions(key2))
+    text = decrypt_with_perm(text, get_positions(key1))
     return text
